@@ -1,0 +1,7 @@
+.table td {
+  padding-left: 10px;
+}
+
+.graph {
+  filter: invert(100%);
+}

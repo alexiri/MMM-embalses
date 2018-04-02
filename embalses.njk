@@ -1,0 +1,15 @@
+{% if loading %}
+  <span class="small dimmed">{{ 'LOADING' | translate | safe }}</span>
+{% else %}
+  <img src='{{graph | safe}}' height='250' width='560' class='graph'>
+
+  <table class='table'>
+  {% for row in table %}
+    <tr class='{% if loop.first %}small{% else %}xsmall{% endif %}'>
+      <td>{{ row[0] | safe }}</td>
+      <td>{{ row[1] | safe }} {{ row[2] | safe }}</td>
+      <td>{{ row[3] | safe }} {{ row[4] | safe }}</td>
+    </tr>
+  {% endfor %}
+  </table>
+{% endif %}
